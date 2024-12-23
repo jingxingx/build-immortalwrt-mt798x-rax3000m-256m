@@ -27,5 +27,5 @@ sed -i 's/ASUS_33003_5G/ImmortalWrt-5G/g' package/mtk/applications/mtwifi-cfg/fi
 #删除冲突的软件包
 rm -rf ./package/istore
 rm -rf ./feeds/kenzo/luci-app-quickstart
-rm -rf ./feeds/kenzo/luci-app-store
+#rm -rf ./feeds/kenzo/luci-app-store
 rm -rf ./feeds/kenzo/luci-lib-taskd
