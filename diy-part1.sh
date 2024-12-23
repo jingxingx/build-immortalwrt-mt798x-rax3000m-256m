@@ -17,6 +17,11 @@
 echo "src-git kenzo https://github.com/kenzok8/openwrt-packages" >> ./feeds.conf.default
 echo "src-git small https://github.com/kenzok8/small" >> ./feeds.conf.default
 #echo "src-git OpenClash https://github.com/vernesong/OpenClash.git" >> ./feeds.conf.default
+find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
+find ./ | grep Makefile | grep mosdns | xargs rm -f
+
+git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
+git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
 #添加额外软件包
 #git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
