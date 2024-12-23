@@ -29,3 +29,4 @@ rm -rf ./package/istore
 rm -rf ./feeds/kenzo/luci-app-quickstart
 #rm -rf ./feeds/kenzo/luci-app-store
 rm -rf ./feeds/kenzo/luci-lib-taskd
+rm -rf ./feeds/small/luci-app-mosdns
