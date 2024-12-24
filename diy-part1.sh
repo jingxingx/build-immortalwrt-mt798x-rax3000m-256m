@@ -14,20 +14,11 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
-echo "src-git kenzo https://github.com/kenzok8/openwrt-packages" >> ./feeds.conf.default
-echo "src-git small https://github.com/kenzok8/small" >> ./feeds.conf.default
+#echo "src-git kenzo https://github.com/kenzok8/openwrt-packages" >> ./feeds.conf.default
+#echo "src-git small https://github.com/kenzok8/small" >> ./feeds.conf.default
 #echo "src-git OpenClash https://github.com/vernesong/OpenClash.git" >> ./feeds.conf.default
-find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
-find ./ | grep Makefile | grep mosdns | xargs rm -f
-rm -rf feeds/packages/lang/golang
-git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
-#git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
-#git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
-rm -rf feeds/packages/net/v2ray-geodata
-
-git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
-git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
+sed -i '1i src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
 
 #添加额外软件包
 #git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
