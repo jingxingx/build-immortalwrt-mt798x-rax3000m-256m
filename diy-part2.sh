@@ -25,8 +25,9 @@ sed -i 's/ASUS_33003_5G/ImmortalWrt-5G/g' package/mtk/applications/mtwifi-cfg/fi
 #sed -i 's/116736k/240128k/g' target/linux/mediatek/image/mt7981.mk
 
 #删除冲突的软件包
-rm -rf ./package/istore
-rm -rf ./feeds/kenzo/luci-app-quickstart
+#rm -rf ./package/istore
+#rm -rf ./feeds/kenzo/luci-app-quickstart
 #rm -rf ./feeds/kenzo/luci-app-store
-rm -rf ./feeds/kenzo/luci-lib-taskd
-rm -rf ./feeds/small/luci-app-mosdns
+#rm -rf ./feeds/kenzo/luci-lib-taskd
+#rm -rf ./feeds/small/luci-app-mosdns
+sed -i 's#GO_PKG_TARGET_VARS.*# #g' feeds/packages/utils/v2dat/Makefile
