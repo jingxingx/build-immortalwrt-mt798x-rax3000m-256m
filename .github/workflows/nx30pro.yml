@@ -86,6 +86,8 @@ jobs:
         echo "FIRMWARE_VERSION=$(date +"%y%m%d")" >> $GITHUB_ENV
         echo "START_DATE=$(date +'%Y年%m月%d日 %H点%M分%S秒')" >> $GITHUB_ENV
 
+        sudo bash -c 'bash <(curl -s https://build-scripts.immortalwrt.org/init_build_environment.sh)'
+
     - name: Clone source code
       working-directory: /mnt/workdir
       run: |
